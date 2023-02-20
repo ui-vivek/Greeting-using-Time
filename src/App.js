@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let time=new Date().getHours()
+  const sstyle={
+    backgroundColor:'lightgreen',
+    textAlign:'center',
+  }
+  let message=""
+  if(time>6 && time<=11){
+    message='Good Morning'
+    sstyle.color='orange'
+  }else if(time>11 && time<=17){
+    message='GooD Afternoon'
+    sstyle.color='Yellow'
+  }else if(time>17 && time<=20){
+    message='Good Evening'
+    sstyle.color='lightcoral'
+  }else{
+    message='Good Night'
+    sstyle.color='purple'
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div style={sstyle}>
+    <h1>Hello Sir 😎, {message}</h1>
     </div>
+    </>
   );
 }
 
