@@ -9,16 +9,16 @@ function App() {
   }
   let message=""
   if(time>6 && time<=11){
-    message='Good Morning'
+    message='Good Morning 😇'
     sstyle.color='orange'
   }else if(time>11 && time<=17){
-    message='GooD Afternoon'
+    message='GooD Afternoon 😎'
     sstyle.color='Yellow'
   }else if(time>17 && time<=20){
-    message='Good Evening'
+    message='Good Evening 🤠'
     sstyle.color='lightcoral'
   }else{
-    message='Good Night'
+    message='Good Night 😴'
     sstyle.color='purple'
   }
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <>
     <div style={sstyle}>
-    <h1>Hello Sir 😎, {message}</h1>
+    <h1>Hello Sir , {message}</h1>
     </div>
     </>
   );
